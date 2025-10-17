@@ -1,0 +1,390 @@
+/*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Mixins
+| Author: P11 Interactive Team
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+| 1. Resets
+| 2. Positioning
+|
+| Notes: Define patterns of property value pairs, which can then be reused in other rule sets
+|
+*/
+
+/*
+| Font Smoothing
+| --------------------------------------------------
+|
+| Aligns most of the browsers with the same font antialiasing.
+|
+*/
+
+@mixin fontsmoothing {
+	-webkit-font-smoothing: auto;
+	-moz-font-smoothing: none;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: auto;
+}
+
+/*
+| Strict Button Style
+| --------------------------------------------------
+|
+| Sets the button style appearance to none for various
+| mobile browsers and OS's that will auto change the styling
+|
+*/
+
+@mixin strictbuttonstyle {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+/*
+| Positioning
+| --------------------------------------------------
+|
+| The following mixins are used for positioning elements
+| via the absolute rule
+|
+*/
+
+@mixin center-vert {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+}
+
+@mixin center-horz {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+}
+
+@mixin centerall {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+@mixin centernone {
+	position: relative !important;
+	top: auto !important;
+	bottom: auto !important;
+  right: auto !important;
+	left: auto !important;
+	transform: translate(0%, 0%) !important;
+	-webkit-transform: translate(0%, 0%) !important;
+	-moz-transform: translate(0%, 0%) !important;
+	-ms-transform: translate(0%, 0%) !important;
+	-o-transform: translate(0%, 0%) !important;
+}
+
+/*
+| Transition
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| transition property
+|
+*/
+
+@mixin transition($args...) {
+	-webkit-transition: #{$args};
+	-moz-transition: #{$args};
+	-ms-transition: #{$args};
+	-o-transition: #{$args};
+	transition: #{$args};
+}
+
+/*
+| Box Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| box-shadow property
+|
+*/
+
+@mixin box-shadow($args) {
+	-webkit-box-shadow: #{$args};
+	-moz-box-shadow: #{$args};
+	-ms-box-shadow: #{$args};
+	-o-box-shadow: #{$args};
+	box-shadow: #{$args};
+}
+
+/*
+| Text Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| text-shadow property
+|
+*/
+
+@mixin text-shadow($args) {
+	-webkit-text-shadow: #{$args};
+	-moz-text-shadow: #{$args};
+	-ms-text-shadow: #{$args};
+	-o-text-shadow: #{$args};
+	text-shadow: #{$args};
+}
+
+/*
+| SVG Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| filter property
+|
+*/
+
+@mixin svg-shadow($args) {
+	-webkit-filter: drop-shadow(#{$args});
+	-moz-filter: drop-shadow(#{$args});
+	-o-filter: drop-shadow(#{$args});
+	filter: drop-shadow(#{$args});
+}
+
+/*
+| Responsive Media Query Mixins
+| --------------------------------------------------
+|
+| The following mixins are used for applying various
+| media queries and specified breakpoints
+|
+*/
+
+@mixin mq-xs {
+	@media (max-width: #{$screen-xs}) {
+		@content;
+	}
+}
+
+@mixin mq-sm {
+	@media (max-width: #{$screen-sm}) {
+		@content;
+	}
+}
+
+@mixin mq-md {
+	@media (max-width: #{$screen-md}) {
+		@content;
+	}
+}
+
+@mixin mq-md-lg {
+	@media (max-width: #{$screen-md-lg}) {
+		@content;
+	}
+}
+
+@mixin mq-lg {
+	@media (max-width: #{$screen-lg}) {
+		@content;
+	}
+}
+
+@mixin mq-xlg {
+	@media (max-width: #{$screen-xlg}) {
+		@content;
+	}
+}
+
+@mixin mq-xxlg {
+	@media (max-width: #{$screen-xxlg}) {
+		@content;
+	}
+}
+
+@mixin mq-min($args) {
+	@media (min-width: (#{$args})) {
+		@content;
+	}
+}
+
+@mixin mq-max($args) {
+	@media (max-width: (#{$args})) {
+		@content;
+	}
+}
+
+@mixin mq-max-height($args) {
+	@media (max-height: (#{$args})) {
+		@content;
+	}
+}
+
+@mixin mq-phone-landscape() {
+	@media screen and (max-width: 736px) and (max-height: 414px) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin mq-tablet-landscape() {
+	@media screen and (max-width: 1024px) and (max-height: 768px) and (orientation: landscape) {
+		@content;
+	}
+}
+
+@mixin mq-small-laptop() {
+	@media screen and (max-height: 700px) {
+		@content;
+	}
+}
+
+/*
+| Transparent Colors
+| --------------------------------------------------
+|
+| Function for creating transparent colors.
+|
+*/
+
+@function fn-transparent-color($color, $opacity) {
+	@return rgba(red($color), green($color), blue($color), $opacity);
+}
+
+/*
+| Gradient Backgrounds
+| --------------------------------------------------
+|
+| Mixin for creating gradient backgrounds
+| @include bg-gradient(fn-transparent-color($color-black, 1), fn-transparent-color($color-black, 0), top, bottom, 0%, 100%);
+|
+*/
+
+@mixin bg-gradient(
+	$start-color,
+	$end-color,
+	$start-postion,
+	$end-position,
+	$start-opacity,
+	$end-opacity
+) {
+	background: $start-color;
+	background: -moz-linear-gradient(
+		$start-postion,
+		$start-color $start-opacity,
+		$end-color $end-opacity
+	);
+	background: -webkit-linear-gradient(
+		$start-postion,
+		$start-color $start-opacity,
+		$end-color $end-opacity
+	);
+	background: linear-gradient(
+		to $end-position,
+		$start-color $start-opacity,
+		$end-color $end-opacity
+	);
+}
+
+/*
+| Rotation
+| --------------------------------------------------
+|
+| Mixin for applying the correct browser prefixes for the
+| transform: rotate property
+|
+*/
+
+@mixin rotate($deg) {
+	-ms-transform: rotate($deg); /* IE 9 */
+	-webkit-transform: rotate($deg); /* Chrome, Safari, Opera */
+	transform: rotate($deg);
+}
+
+/*
+| Keyframe animations
+| --------------------------------------------------
+| Mixin for applying animations to elements
+|
+*/
+
+@mixin keyframes($animation-name) {
+	@-webkit-keyframes #{$animation-name} {
+		@content;
+	}
+	@-moz-keyframes #{$animation-name} {
+		@content;
+	}
+	@-ms-keyframes #{$animation-name} {
+		@content;
+	}
+	@-o-keyframes #{$animation-name} {
+		@content;
+	}
+	@keyframes #{$animation-name} {
+		@content;
+	}
+};
+
+
+// =============================================================================
+// String Replace
+// =============================================================================
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}

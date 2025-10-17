@@ -1,0 +1,102 @@
+/*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Variables
+| Author: P11
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+/* GLOBAL*/
+$gap-width: 50px;
+$half-gap-width: 25px;
+$quarter-gap-width: calc(50px / 3);
+$double-gap-width: calc(50px * 2);
+
+/* FONTS*/
+// $font-main: 'Public Sans', Arial, Helvetica, sans-serif;
+// $font-main-bold: 'Public Sans', Arial, Helvetica, sans-serif;
+// $font-main-light: 'Public Sans', Arial, Helvetica, sans-serif;
+// $font-headline: 'Abel', Times,"Times New Roman",Georgia,serif;
+// $font-headline-bold: 'Abel', Times,"Times New Roman",Georgia,serif;
+// $font-headline-light: 'Abel', Times,"Times New Roman",Georgia,serif;
+
+// $font-main-light-weight: 400;
+// $font-main-weight: 500;
+// $font-main-bold-weight: 700;
+
+// $font-headline-light-weight: 300;
+// $font-headline-weight: 400;
+// $font-headline-bold-weight: 700;
+
+$font-main: 'mr-eaves-modern', Arial, Helvetica, sans-serif;
+$font-main-bold: 'mr-eaves-modern', Arial, Helvetica, sans-serif;
+$font-main-light: 'mr-eaves-modern', Arial, Helvetica, sans-serif;
+$font-headline: 'ivymode', Times,"Times New Roman",Georgia,serif;
+$font-headline-bold: 'ivymode', Times,"Times New Roman",Georgia,serif;
+$font-headline-light: 'ivymode', Times,"Times New Roman",Georgia,serif;
+
+$font-main-light-weight: 300;
+$font-main-weight: 400;
+$font-main-bold-weight: 700;
+
+$font-headline-light-weight: 200;
+$font-headline-weight: 300;
+$font-headline-bold-weight: 700;
+
+/* COLORS */
+$color-black: #000000;
+$color-white: #ffffff;
+$color-alert: #ff0f0f;
+// $color-base: #6d6e70;
+$color-base: #2f4140;
+$color-primary: #4d6b72;
+$color-secondary: #91a4a8;
+$color-tertiary: #378e8f;
+$color-accent: #378e8f;
+$color-subdued: #eff0f0;
+
+
+$color-base-darkest: darken($color-base, 10%);
+$color-base-dark: darken($color-base, 5%);
+$color-base-light: lighten($color-base, 5%);
+$color-base-lightest: lighten($color-base, 10%);
+$color-base-superlight: lighten($color-base, 30%);
+
+$color-primary-darkest: darken($color-primary, 10%);
+$color-primary-dark: darken($color-primary, 5%);
+$color-primary-light: lighten($color-primary, 5%);
+$color-primary-lightest: lighten($color-primary, 10%);
+$color-primary-superlight: lighten($color-primary, 30%);
+
+$color-secondary-darkest: darken($color-secondary, 10%);
+$color-secondary-dark: darken($color-secondary, 5%);
+$color-secondary-light: lighten($color-secondary, 5%);
+$color-secondary-lightest: lighten($color-secondary, 10%);
+$color-secondary-superlight: lighten($color-secondary, 50%);
+
+$color-accent-darkest: darken($color-accent, 10%);
+$color-accent-dark: darken($color-accent, 5%);
+$color-accent-light: lighten($color-accent, 5%);
+$color-accent-lightest: lighten($color-accent, 10%);
+$color-accent-superlight: lighten($color-accent, 50%);
+
+$color-subdued-darkest: darken($color-subdued, 10%);
+$color-subdued-dark: darken($color-subdued, 5%);
+$color-subdued-light: lighten($color-subdued, 5%);
+$color-subdued-lightest: lighten($color-subdued, 10%);
+$color-subdued-superlight: lighten($color-subdued, 50%);
+
+/* BREAKPOINTS */
+$screen-xs: 350px; /* Extra small mobile */
+$screen-sm: 640px; /* Mobile */
+$screen-md: 768px; /* Tablet */
+$screen-md-lg: 845px; /* Middle Sized Devices */
+$screen-lg: 1024px; /* Small Laptop */
+$screen-xlg: 1248px; /* Large Laptop / Desktop */
+$mq-xxlg: 1500px; /* Large Desktop */

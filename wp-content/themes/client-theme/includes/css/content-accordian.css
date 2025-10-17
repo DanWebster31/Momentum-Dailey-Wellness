@@ -1,0 +1,304 @@
+/* BASE */ /*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Variables
+| Author: P11
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+/* GLOBAL*/
+/* FONTS*/
+/* COLORS */
+/* BREAKPOINTS */
+/* Extra small mobile */
+/* Mobile */
+/* Tablet */
+/* Middle Sized Devices */
+/* Small Laptop */
+/* Large Laptop / Desktop */
+/* Large Desktop */
+/*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Mixins
+| Author: P11 Interactive Team
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+| 1. Resets
+| 2. Positioning
+|
+| Notes: Define patterns of property value pairs, which can then be reused in other rule sets
+|
+*/
+/*
+| Font Smoothing
+| --------------------------------------------------
+|
+| Aligns most of the browsers with the same font antialiasing.
+|
+*/
+/*
+| Strict Button Style
+| --------------------------------------------------
+|
+| Sets the button style appearance to none for various
+| mobile browsers and OS's that will auto change the styling
+|
+*/
+/*
+| Positioning
+| --------------------------------------------------
+|
+| The following mixins are used for positioning elements
+| via the absolute rule
+|
+*/
+/*
+| Transition
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| transition property
+|
+*/
+/*
+| Box Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| box-shadow property
+|
+*/
+/*
+| Text Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| text-shadow property
+|
+*/
+/*
+| SVG Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| filter property
+|
+*/
+/*
+| Responsive Media Query Mixins
+| --------------------------------------------------
+|
+| The following mixins are used for applying various
+| media queries and specified breakpoints
+|
+*/
+/*
+| Transparent Colors
+| --------------------------------------------------
+|
+| Function for creating transparent colors.
+|
+*/
+/*
+| Gradient Backgrounds
+| --------------------------------------------------
+|
+| Mixin for creating gradient backgrounds
+| @include bg-gradient(fn-transparent-color($color-black, 1), fn-transparent-color($color-black, 0), top, bottom, 0%, 100%);
+|
+*/
+/*
+| Rotation
+| --------------------------------------------------
+|
+| Mixin for applying the correct browser prefixes for the
+| transform: rotate property
+|
+*/
+/*
+| Keyframe animations
+| --------------------------------------------------
+| Mixin for applying animations to elements
+|
+*/
+/* BLOCKS */
+/* Accordian */
+.accordion-container {
+  margin: 0 auto;
+}
+.accordion-container a.accordion-toggle {
+  position: relative;
+  display: block;
+  padding: 1.5rem 45px 1.5rem 1rem;
+  font-size: 1.5em;
+  line-height: 1.25em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+@media (max-width: 768px) {
+  .accordion-container a.accordion-toggle {
+    font-size: 1.25em;
+  }
+}
+.accordion-container a.accordion-toggle::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  opacity: 1;
+  background-color: #2f4140;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.accordion-container a.accordion-toggle span {
+  display: block;
+  padding: 0.5em 0;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.accordion-container a.accordion-toggle span.toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  right: 1em;
+  font-size: 1em;
+}
+.accordion-container a.accordion-toggle.open {
+  padding-bottom: 0;
+}
+.accordion-container a.accordion-toggle.open::after {
+  opacity: 0;
+  -webkit-transition: opacity 0s ease;
+  -moz-transition: opacity 0s ease;
+  -ms-transition: opacity 0s ease;
+  -o-transition: opacity 0s ease;
+  transition: opacity 0s ease;
+}
+.accordion-container .accordion-toggle.open + .accordion-content::after {
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.accordion-container .accordion-content {
+  position: relative;
+  display: none;
+  margin: 1rem 0 0;
+  padding: 10px 15px 2rem 15px;
+  overflow: auto;
+}
+.accordion-container .accordion-content::after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #2f4140;
+  opacity: 0;
+  -webkit-transition: opacity 0s ease;
+  -moz-transition: opacity 0s ease;
+  -ms-transition: opacity 0s ease;
+  -o-transition: opacity 0s ease;
+  transition: opacity 0s ease;
+}
+
+.accordionsub-container {
+  position: relative;
+  margin: 0 auto;
+}
+.accordionsub-container.text-above {
+  margin-top: 2rem;
+}
+.accordionsub-container .bgcolor {
+  opacity: 0.05;
+}
+.accordionsub-container a.accordionsub-toggle {
+  position: relative;
+  display: block;
+  padding: 1rem 45px 1rem 1rem;
+  margin-bottom: 2px;
+  font-size: 1.5rem;
+  line-height: 1.25em;
+  text-decoration: none;
+  margin-bottom: 3px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.accordionsub-container a.accordionsub-toggle span {
+  display: block;
+  padding: 0.5em 0;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.accordionsub-container a.accordionsub-toggle span.toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  right: 1em;
+  font-size: 1em;
+}
+.accordionsub-container a.accordionsub-toggle.open {
+  font-weight: 600;
+  background: none;
+}
+.accordionsub-container .accordionsub-content {
+  display: none;
+  margin: 0;
+  padding: 0 1em 1em 1em;
+  margin: 1em 0;
+  /*padding: 20px 20px 0 20px;
+  overflow: auto;*/
+}
+.accordionsub-container .accordionsub-content p:last-of-type {
+  margin: 0;
+}
+
+/*# sourceMappingURL=content-accordian.css.map */

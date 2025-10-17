@@ -1,0 +1,218 @@
+/*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Meyer Reset
+| Author: P11 Interactive Team
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+|
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+b,
+i,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+section,
+time {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font: inherit;
+	font-size: 100%;
+}
+
+:focus {
+	outline: 0;
+}
+
+body {
+	line-height: 1;
+	color: $color-black;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption,
+th,
+td {
+	text-align: left;
+	font-weight: normal;
+}
+
+button,
+input[type='submit'] {
+	border-radius: 0;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+}
+
+blockquote,
+q {
+	quotes: '' '';
+}
+
+*,
+*:before,
+*:after {
+	border: 0;
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	line-height: normal;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font: 400 normal 16px/16px Arial, Helvetica, sans-serif;
+}
+
+audio,
+canvas,
+img,
+video {
+	vertical-align: middle;
+}
+
+section {
+	position: relative;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+textarea {
+	font: inherit;
+}
+
+input[type='submit'] {
+	box-shadow: none;
+}
+
+textarea {
+	resize: vertical;
+	font-family: inherit;
+	font-size: inherit;
+}
+
+a,
+.trans {
+	@include transition(all 0.5s);
+}
+
+a {
+	color: #000;
+}
+
+a:hover {
+	color: #eee;
+}
+
+a:active {
+	color: #eee;
+}
+
+p {
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+article p {
+	line-height: 1.75em;
+}

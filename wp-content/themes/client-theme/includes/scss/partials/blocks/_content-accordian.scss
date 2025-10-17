@@ -1,0 +1,196 @@
+/* Accordian */
+
+.accordion-container {
+	margin: 0 auto;
+
+	a.accordion-toggle {
+		// font-family: $font-headline;
+		position: relative;
+		display: block;
+		padding: 1.5rem 45px 1.5rem 1rem;
+		font-size: 1.5em;
+		line-height: 1.25em;
+		// color: $color-primary;
+		text-decoration: none;
+		text-transform: uppercase;
+		// background-color: fn-transparent-color($color-secondary, 0.1);
+		// border-bottom: 1px solid $color-base;
+		// margin: 10px 0 0 0;
+		@include transition(all 0.2s ease);
+
+		@include mq-md {
+			font-size: 1.25em;
+		}
+
+		&::after {
+			content: '';
+			height: 1px;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			opacity: 1;
+			background-color: $color-base;
+			@include transition(opacity 0.5s ease);
+		}
+
+		span {
+			display: block;
+			padding: 0.5em 0;
+			margin: 0 auto;
+			text-align: center;
+			// color: $color-primary;
+			@include transition(all 0.2s ease);
+
+			&.toggle-icon {
+				// color: $color-surrogate;
+				@include center-vert();
+				right: 1em;
+				font-size: 1em;
+			}
+		}
+
+		&:hover {
+			// color: $color-surrogate;
+			// border-color: $color-secondary;
+		}
+
+		&:hover > span {
+
+		}
+
+		&.open {
+			// color: $color-surrogate;
+			// border-color: $color-secondary;
+			// font-weight: 600;
+			padding-bottom: 0;
+
+			&::after {
+				opacity: 0;
+				@include transition(opacity 0s ease);
+			}
+		}
+
+	}
+
+	.accordion-toggle.open + .accordion-content {
+		&::after {
+			opacity: 1;
+			@include transition(opacity 0.5s ease);
+		}
+	}
+
+	.accordion-content {
+		position: relative;
+		display: none;
+		margin: 1rem 0 0;
+		padding: 10px 15px 2rem 15px;
+		overflow: auto;
+		
+		&::after {
+			content: '';
+			height: 1px;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			background-color: $color-base;
+			opacity: 0;
+			@include transition(opacity 0s ease);
+		}
+
+	}
+}
+
+// Sub Container
+
+.accordionsub-container {
+	position: relative;
+	margin: 0 auto;
+	// background-color: lighten($color-secondary, 45%);
+	// border-bottom: 1px solid $color-primary;
+
+	&.text-above {
+		margin-top: 2rem;
+	}
+
+	.bgcolor {
+		opacity: 0.05;
+	}
+
+	a.accordionsub-toggle {
+		// font-family: $font-headline;
+		position: relative;
+		display: block;
+		padding: 1rem 45px 1rem 1rem;
+		margin-bottom: 2px;
+		font-size: 1.5rem;
+		line-height: 1.25em;
+		text-decoration: none;
+		margin-bottom: 3px;
+		@include transition(all 0.2s ease);
+
+		// &::after {
+		// 	content: '';
+		// 	height: 1px;
+		// 	width: 100%;
+		// 	position: absolute;
+		// 	left: 0;
+		// 	bottom: 0;
+		// 	opacity: 1;
+		// 	background-color: $color-base;
+		// 	@include transition(opacity 0.5s ease);
+		// }
+
+		span {
+			display: block;
+			padding: 0.5em 0;
+			margin: 0 auto;
+			text-align: center;
+			// color: $color-primary;
+			@include transition(all 0.2s ease);
+
+			&.toggle-icon {
+				// color: $color-secondary;
+				@include center-vert();
+				right: 1em;
+				font-size: 1em;
+			}
+		}
+
+		&:hover {
+			// background-color: lighten($color-secondary, 45%);
+			// border-color: $color-secondary;
+		}
+
+		&:hover > span {
+
+		}
+
+		&.open {
+			// border-color: $color-secondary;
+			font-weight: 600;
+			background: none;
+		}
+
+		&.open > span {
+
+		}
+	}
+
+	.accordionsub-content {
+		display: none;
+		margin: 0;
+		padding: 0 1em 1em 1em;
+		margin: 1em 0;
+		/*padding: 20px 20px 0 20px;
+		overflow: auto;*/
+
+		p {
+			&:last-of-type {
+				margin: 0;
+			}
+		}
+	}
+
+}

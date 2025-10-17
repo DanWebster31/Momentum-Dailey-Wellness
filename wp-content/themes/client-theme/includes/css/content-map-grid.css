@@ -1,0 +1,254 @@
+/* BASE */ /*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Variables
+| Author: P11
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+/* GLOBAL*/
+/* FONTS*/
+/* COLORS */
+/* BREAKPOINTS */
+/* Extra small mobile */
+/* Mobile */
+/* Tablet */
+/* Middle Sized Devices */
+/* Small Laptop */
+/* Large Laptop / Desktop */
+/* Large Desktop */
+/*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Mixins
+| Author: P11 Interactive Team
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+| 1. Resets
+| 2. Positioning
+|
+| Notes: Define patterns of property value pairs, which can then be reused in other rule sets
+|
+*/
+/*
+| Font Smoothing
+| --------------------------------------------------
+|
+| Aligns most of the browsers with the same font antialiasing.
+|
+*/
+/*
+| Strict Button Style
+| --------------------------------------------------
+|
+| Sets the button style appearance to none for various
+| mobile browsers and OS's that will auto change the styling
+|
+*/
+/*
+| Positioning
+| --------------------------------------------------
+|
+| The following mixins are used for positioning elements
+| via the absolute rule
+|
+*/
+/*
+| Transition
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| transition property
+|
+*/
+/*
+| Box Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| box-shadow property
+|
+*/
+/*
+| Text Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| text-shadow property
+|
+*/
+/*
+| SVG Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| filter property
+|
+*/
+/*
+| Responsive Media Query Mixins
+| --------------------------------------------------
+|
+| The following mixins are used for applying various
+| media queries and specified breakpoints
+|
+*/
+/*
+| Transparent Colors
+| --------------------------------------------------
+|
+| Function for creating transparent colors.
+|
+*/
+/*
+| Gradient Backgrounds
+| --------------------------------------------------
+|
+| Mixin for creating gradient backgrounds
+| @include bg-gradient(fn-transparent-color($color-black, 1), fn-transparent-color($color-black, 0), top, bottom, 0%, 100%);
+|
+*/
+/*
+| Rotation
+| --------------------------------------------------
+|
+| Mixin for applying the correct browser prefixes for the
+| transform: rotate property
+|
+*/
+/*
+| Keyframe animations
+| --------------------------------------------------
+| Mixin for applying animations to elements
+|
+*/
+/* BLOCKS */
+.map-grid-content {
+  position: relative;
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  .map-grid-content {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+}
+
+.map-grid-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+@media (max-width: 768px) {
+  .map-grid-item {
+    margin-bottom: 2rem;
+  }
+}
+
+.gmap-holder {
+  width: 100%;
+  padding-bottom: 70%;
+  position: relative;
+}
+.gmap-holder .googledirections-map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+.gmap-holder .googledirections-map .map-canvas {
+  border-radius: 10px;
+  background-color: #eff0f0;
+}
+
+.map-views, .map-views2 {
+  top: 10px;
+}
+
+.map-views, .map-views2 {
+  position: absolute;
+  right: 10px;
+  z-index: 200;
+  width: 110px;
+  height: 35px;
+  margin: 0;
+  padding: 0.7em 0.5em 0.5em;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+.map-views:hover, .map-views2:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.map-views2 {
+  display: none;
+}
+
+@media (max-width: 940px) {
+  .map-views,
+  .map-views2 {
+    display: none;
+  }
+}
+
+.cd-zoom-in, .cd-zoom-out {
+  position: absolute;
+  z-index: 300;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  /*opacity:0.8;*/
+  background-repeat: no-repeat;
+  background-size: 24px 48px;
+  background-image: url(../../images/poi/icons/cd-icon-controller.png);
+}
+
+.cd-zoom-in:hover, .cd-zoom-out:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.cd-zoom-in {
+  right: 125px;
+  background-position: 50% 3px;
+}
+@media (max-width: 940px) {
+  .cd-zoom-in {
+    z-index: 1;
+  }
+}
+
+.cd-zoom-out {
+  right: 165px;
+  background-position: 50% -21px;
+}
+@media (max-width: 940px) {
+  .cd-zoom-out {
+    z-index: 1;
+  }
+}
+
+/*# sourceMappingURL=content-map-grid.css.map */

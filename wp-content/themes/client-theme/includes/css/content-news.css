@@ -1,0 +1,510 @@
+/* BASE */ /*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Variables
+| Author: P11
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+/* GLOBAL*/
+/* FONTS*/
+/* COLORS */
+/* BREAKPOINTS */
+/* Extra small mobile */
+/* Mobile */
+/* Tablet */
+/* Middle Sized Devices */
+/* Small Laptop */
+/* Large Laptop / Desktop */
+/* Large Desktop */
+/*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Mixins
+| Author: P11 Interactive Team
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+| 1. Resets
+| 2. Positioning
+|
+| Notes: Define patterns of property value pairs, which can then be reused in other rule sets
+|
+*/
+/*
+| Font Smoothing
+| --------------------------------------------------
+|
+| Aligns most of the browsers with the same font antialiasing.
+|
+*/
+/*
+| Strict Button Style
+| --------------------------------------------------
+|
+| Sets the button style appearance to none for various
+| mobile browsers and OS's that will auto change the styling
+|
+*/
+/*
+| Positioning
+| --------------------------------------------------
+|
+| The following mixins are used for positioning elements
+| via the absolute rule
+|
+*/
+/*
+| Transition
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| transition property
+|
+*/
+/*
+| Box Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| box-shadow property
+|
+*/
+/*
+| Text Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| text-shadow property
+|
+*/
+/*
+| SVG Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| filter property
+|
+*/
+/*
+| Responsive Media Query Mixins
+| --------------------------------------------------
+|
+| The following mixins are used for applying various
+| media queries and specified breakpoints
+|
+*/
+/*
+| Transparent Colors
+| --------------------------------------------------
+|
+| Function for creating transparent colors.
+|
+*/
+/*
+| Gradient Backgrounds
+| --------------------------------------------------
+|
+| Mixin for creating gradient backgrounds
+| @include bg-gradient(fn-transparent-color($color-black, 1), fn-transparent-color($color-black, 0), top, bottom, 0%, 100%);
+|
+*/
+/*
+| Rotation
+| --------------------------------------------------
+|
+| Mixin for applying the correct browser prefixes for the
+| transform: rotate property
+|
+*/
+/*
+| Keyframe animations
+| --------------------------------------------------
+| Mixin for applying animations to elements
+|
+*/
+/* BLOCKS */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  NEWS
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#above-news {
+  margin-bottom: 2rem;
+}
+#above-news .above-news-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+}
+@media (max-width: 768px) {
+  #above-news .above-news-content {
+    flex-direction: column;
+  }
+}
+#above-news .above-news-content #categories,
+#above-news .above-news-content #news-social,
+#above-news .above-news-content #weather {
+  width: calc(33.33% - 1rem);
+}
+@media (max-width: 768px) {
+  #above-news .above-news-content #categories,
+  #above-news .above-news-content #news-social,
+  #above-news .above-news-content #weather {
+    width: 100%;
+  }
+}
+#above-news .above-news-content #categories h2,
+#above-news .above-news-content #news-social h2,
+#above-news .above-news-content #weather h2 {
+  font-family: "mr-eaves-modern", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: #378e8f;
+  font-size: 1.5em;
+  line-height: 1em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  #above-news .above-news-content #categories h2,
+  #above-news .above-news-content #news-social h2,
+  #above-news .above-news-content #weather h2 {
+    text-align: center;
+  }
+}
+#above-news .above-news-content #categories h2 {
+  margin-bottom: 1.25rem;
+}
+
+#categories ul {
+  margin: 0;
+  padding: 0;
+}
+#categories ul li {
+  margin: 0;
+  padding: 0 0 0.75em 0;
+  list-style: none;
+}
+#categories ul li:last-of-type {
+  padding: 0;
+}
+#categories ul li a {
+  font-size: 1.188em;
+  text-decoration: none;
+  color: #4d6b72;
+}
+#categories ul li a:hover {
+  text-decoration: underline;
+  color: #91a4a8;
+}
+#categories ul li.current-cat a {
+  text-decoration: underline;
+  color: #91a4a8;
+}
+
+#news-social ul li {
+  display: inline-block;
+}
+#news-social ul li a {
+  display: block;
+  color: #378e8f;
+  font-size: 1.5em;
+  text-decoration: none;
+  margin: 0.5rem;
+}
+#news-social ul li a:hover {
+  opacity: 0.65;
+}
+@media (max-width: 350px) {
+  #news-social ul {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  #weather {
+    display: none;
+  }
+}
+
+/* Accuweather */
+h3#weathertop-deg {
+  font-size: 3em;
+  text-align: center;
+  font-family: "mr-eaves-modern", Arial, Helvetica, sans-serif;
+  padding-right: 60px;
+  margin-top: 1rem;
+}
+h3#weathertop-deg span {
+  vertical-align: middle;
+  position: absolute;
+}
+h3#weathertop-deg span i {
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  position: absolute;
+  top: -16px;
+}
+
+body.single #slider {
+  height: 500px;
+}
+
+/*Flex items*/
+.news-post-holder {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.5rem;
+}
+.news-post-holder .news-post {
+  display: flex;
+  width: 33.33%;
+  padding: 0.5rem;
+}
+@media (max-width: 1024px) {
+  .news-post-holder .news-post {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .news-post-holder .news-post {
+    width: 100%;
+  }
+}
+.news-post-holder .news-post .news-post-content {
+  position: relative;
+  display: flex;
+  background: #91a4a8;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none !important;
+  -webkit-transition: background 0.5s ease;
+  -moz-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+.news-post-holder .news-post .news-post-content img {
+  max-width: 100%;
+  flex-shrink: 0;
+}
+.news-post-holder .news-post .news-post-content .overlay {
+  z-index: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.news-post-holder .news-post .news-post-content .post-img {
+  position: relative;
+  width: 100%;
+  height: 28vw;
+  z-index: 1;
+  background-color: #91a4a8;
+  -webkit-transition: transform 0.5s ease;
+  -moz-transition: transform 0.5s ease;
+  -ms-transition: transform 0.5s ease;
+  -o-transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
+}
+@media (min-width: 1800px) {
+  .news-post-holder .news-post .news-post-content .post-img {
+    height: 500px;
+  }
+}
+@media (max-width: 768px) {
+  .news-post-holder .news-post .news-post-content .post-img {
+    height: 60vw;
+  }
+}
+.news-post-holder .news-post .news-post-content .news-post-text {
+  position: relative;
+  z-index: 2;
+  padding: 3em 2em 4.5em;
+  border-top: 1rem solid #378e8f;
+}
+@media (max-width: 640px) {
+  .news-post-holder .news-post .news-post-content .news-post-text {
+    padding: 3em 1em 4.5em;
+  }
+}
+.news-post-holder .news-post .news-post-content .more {
+  font-weight: 400;
+  color: #ffffff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  bottom: 2em;
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  font-size: 1.25rem;
+  line-height: 1.125em;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.news-post-holder .news-post .news-post-content .more:after {
+  font-family: "FontAwesome";
+  content: "\f105";
+  display: inline-block;
+  position: absolute;
+  margin: 0 0.25em;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  font-size: 0.9em;
+  will-change: left, opacity;
+  -webkit-transition: margin 0.25s ease;
+  -moz-transition: margin 0.25s ease;
+  -ms-transition: margin 0.25s ease;
+  -o-transition: margin 0.25s ease;
+  transition: margin 0.25s ease;
+}
+.news-post-holder .news-post .news-post-content:hover {
+  background-color: #83989d;
+}
+.news-post-holder .news-post .news-post-content:hover .overlay {
+  opacity: 0.15;
+}
+.news-post-holder .news-post .news-post-content:hover .post-img {
+  transform: scale(1.07);
+}
+.news-post-holder .news-post .news-post-content:hover .more:after {
+  margin: 0 0 0 0.5em;
+}
+.news-post-holder .news-post .news-post-content .news-post-text .date {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+.news-post-holder .news-post .news-post-content .news-post-text h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 1.125em;
+  margin-bottom: 1rem;
+  text-align: center;
+  margin: 0 1rem 1rem;
+}
+.news-post-holder .news-post .news-post-content .news-post-text p {
+  color: #ffffff;
+  font-size: 1.125em;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+.news-post-holder .news-post:nth-of-type(2) .news-post-content {
+  background-color: #4d6b72;
+}
+.news-post-holder .news-post:nth-of-type(2) .news-post-content:hover {
+  background-color: #435d63;
+}
+.news-post-holder .news-post:nth-of-type(2) .news-post-content .post-img {
+  background-color: #4d6b72;
+}
+
+.news-post-single .news-post-title h1, .news-post-single .news-post-title h2 {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #91a4a8;
+  text-align: center;
+  margin: 0 0 1rem;
+}
+.news-post-single .news-post-title .date {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #91a4a8;
+}
+.news-post-single .news-post-text {
+  padding: 2em 0 0;
+}
+.news-post-single .news-post-text .default-content a {
+  color: inherit;
+}
+.news-post-single .featured-img {
+  width: 100%;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+}
+
+.news-back {
+  padding: 4em;
+}
+@media (max-width: 640px) {
+  .news-back {
+    padding: 2em;
+  }
+}
+
+#btn_loadmore {
+  width: 250px;
+  margin: 1em auto 0;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+#btn_loadmore .boxbtn:after {
+  display: none;
+}
+nav.pagination {
+  text-align: center;
+  margin: 3rem 0 4rem;
+}
+nav.pagination:first-of-type {
+  margin: 0 0 3rem;
+}
+nav.pagination .nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+nav.pagination .nav-links a, nav.pagination .nav-links span {
+  font-weight: 700;
+  width: 40px;
+  height: 40px;
+  color: #4d6b72;
+  border: 1px solid #4d6b72;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: rgba(var(--secondary-color-rgb), 0);
+  -webkit-transition: color 0.5s ease, background-color 0.5s ease;
+  -moz-transition: color 0.5s ease, background-color 0.5s ease;
+  -ms-transition: color 0.5s ease, background-color 0.5s ease;
+  -o-transition: color 0.5s ease, background-color 0.5s ease;
+  transition: color 0.5s ease, background-color 0.5s ease;
+}
+nav.pagination .nav-links a:hover, nav.pagination .nav-links a.current, nav.pagination .nav-links span:hover, nav.pagination .nav-links span.current {
+  color: #ffffff;
+  background-color: #91a4a8;
+}
+
+/*# sourceMappingURL=content-news.css.map */

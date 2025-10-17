@@ -1,0 +1,409 @@
+/* BASE */ /*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Variables
+| Author: P11
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+/* GLOBAL*/
+/* FONTS*/
+/* COLORS */
+/* BREAKPOINTS */
+/* Extra small mobile */
+/* Mobile */
+/* Tablet */
+/* Middle Sized Devices */
+/* Small Laptop */
+/* Large Laptop / Desktop */
+/* Large Desktop */
+/*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Mixins
+| Author: P11 Interactive Team
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+| 1. Resets
+| 2. Positioning
+|
+| Notes: Define patterns of property value pairs, which can then be reused in other rule sets
+|
+*/
+/*
+| Font Smoothing
+| --------------------------------------------------
+|
+| Aligns most of the browsers with the same font antialiasing.
+|
+*/
+/*
+| Strict Button Style
+| --------------------------------------------------
+|
+| Sets the button style appearance to none for various
+| mobile browsers and OS's that will auto change the styling
+|
+*/
+/*
+| Positioning
+| --------------------------------------------------
+|
+| The following mixins are used for positioning elements
+| via the absolute rule
+|
+*/
+/*
+| Transition
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| transition property
+|
+*/
+/*
+| Box Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| box-shadow property
+|
+*/
+/*
+| Text Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| text-shadow property
+|
+*/
+/*
+| SVG Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| filter property
+|
+*/
+/*
+| Responsive Media Query Mixins
+| --------------------------------------------------
+|
+| The following mixins are used for applying various
+| media queries and specified breakpoints
+|
+*/
+/*
+| Transparent Colors
+| --------------------------------------------------
+|
+| Function for creating transparent colors.
+|
+*/
+/*
+| Gradient Backgrounds
+| --------------------------------------------------
+|
+| Mixin for creating gradient backgrounds
+| @include bg-gradient(fn-transparent-color($color-black, 1), fn-transparent-color($color-black, 0), top, bottom, 0%, 100%);
+|
+*/
+/*
+| Rotation
+| --------------------------------------------------
+|
+| Mixin for applying the correct browser prefixes for the
+| transform: rotate property
+|
+*/
+/*
+| Keyframe animations
+| --------------------------------------------------
+| Mixin for applying animations to elements
+|
+*/
+/* BLOCKS */
+.feature-section .feature-section-content {
+  min-height: 100%;
+  max-width: 1500px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  .feature-section .feature-section-content {
+    display: block;
+    margin-bottom: 2rem;
+  }
+}
+.feature-section .feature-section-image {
+  width: 50%;
+  min-height: 100%;
+  overflow: hidden;
+  aspect-ratio: 3/2;
+}
+@media (max-width: 768px) {
+  .feature-section .feature-section-image {
+    position: relative;
+    width: calc(100% - 1rem);
+    margin: 0 0.5rem;
+    height: 85vw;
+  }
+}
+.feature-section .feature-section-image .slide {
+  backface-visibility: hidden;
+}
+.feature-section .feature-section-circle {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+}
+@media (max-width: 768px) {
+  .feature-section .feature-section-circle {
+    height: 85vw;
+  }
+}
+.feature-section .feature-section-circle .feature-section-circle-image {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(200px, -200px);
+  margin: 0 auto;
+  transition: none;
+}
+@media (max-width: 768px) {
+  .feature-section .feature-section-circle .feature-section-circle-image {
+    height: 85vw;
+    width: 85vw;
+    transform: none !important;
+  }
+}
+.feature-section .feature-section-text {
+  position: relative;
+  display: block;
+  width: 50%;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  text-decoration: none;
+  padding: 4rem 0 4rem 4rem;
+}
+.feature-section .feature-section-text.has-circle {
+  padding-bottom: 230px;
+}
+@media (max-width: 768px) {
+  .feature-section .feature-section-text.has-circle {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section .feature-section-text {
+    margin: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .feature-section .feature-section-text {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 4em 2em;
+  }
+}
+@media (max-width: 640px) {
+  .feature-section .feature-section-text {
+    padding: 3em 1em;
+  }
+}
+.feature-section .feature-section-text .overlay {
+  z-index: -1;
+  mix-blend-mode: multiply;
+  opacity: 0.95;
+}
+.feature-section .feature-section-text h2,
+.feature-section .feature-section-text h3,
+.feature-section .feature-section-text h4,
+.feature-section .feature-section-text h5,
+.feature-section .feature-section-text h6 {
+  margin-top: 1rem;
+}
+.feature-section .feature-section-text h2.section-title {
+  margin: 0;
+}
+.feature-section .feature-section-text p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  line-height: 1.35em;
+}
+.feature-section .feature-section-text p:first-of-type {
+  margin-bottom: 0;
+}
+.feature-section .feature-section-text p.disclaimer {
+  font-size: 0.85em;
+  text-align: right;
+  margin-bottom: 0;
+}
+.feature-section .feature-section-text ul {
+  margin-top: 1rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.feature-section .feature-section-text ul li {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.125em;
+}
+.feature-section .feature-section-text .feature-section-text-links {
+  margin-top: 1rem;
+}
+.feature-section .feature-section-text .feature-section-text-links a {
+  font-size: 1.5em;
+  margin: 0 auto;
+  width: fit-content;
+  margin-top: 1rem;
+  display: block;
+}
+.feature-section.reverse .feature-section-content {
+  flex-direction: row-reverse;
+}
+.feature-section.reverse .feature-section-circle .feature-section-circle-image {
+  transform: translate(-200px, -200px);
+}
+.feature-section.reverse .feature-section-image {
+  right: auto;
+  left: 0;
+}
+.feature-section.reverse .feature-section-text {
+  padding: 4rem 4rem 4rem 0;
+}
+.feature-section.reverse .feature-section-text.has-circle {
+  padding-bottom: 230px;
+}
+@media (max-width: 768px) {
+  .feature-section.reverse .feature-section-text.has-circle {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.reverse .feature-section-text {
+    padding: 4em 2em 0;
+  }
+}
+@media (max-width: 768px) {
+  .feature-section.reverse .feature-section-text {
+    padding: 3em 1em 0;
+  }
+}
+@media (max-width: 640px) {
+  .feature-section.reverse .feature-section-text {
+    padding: 2em 1em 0;
+  }
+}
+.feature-section.full-width .feature-section-content {
+  justify-content: center;
+  min-height: 80vh;
+}
+.feature-section.full-width .feature-section-image {
+  width: 100%;
+}
+.feature-section.full-width .feature-section-text {
+  min-height: 0;
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg .feature-section-content {
+    display: block;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg .feature-section-image {
+    position: relative;
+    width: calc(100% - 1rem);
+    margin: 0 0.5rem;
+    height: 60vw;
+  }
+}
+@media (max-width: 768px) {
+  .feature-section.break-lg .feature-section-image {
+    height: 85vw;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg .feature-section-circle {
+    height: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg .feature-section-circle .feature-section-circle-image {
+    height: 85vw;
+    width: 85vw;
+    transform: none !important;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg .feature-section-text {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 4em 1em 0;
+  }
+}
+@media (max-width: 1024px) and (max-width: 640px) {
+  .feature-section.break-lg .feature-section-text {
+    padding: 2em 1em 0;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg .feature-section-text.has-circle {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg.reverse .feature-section-content {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg.reverse .feature-section-image {
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .feature-section.break-lg.reverse .feature-section-text {
+    padding: 4em 1em 0;
+    min-height: 0;
+  }
+}
+@media (max-width: 640px) {
+  .feature-section.break-lg.reverse .feature-section-text {
+    padding: 2em 1em 0;
+  }
+}
+
+/*# sourceMappingURL=content-feature-section.css.map */

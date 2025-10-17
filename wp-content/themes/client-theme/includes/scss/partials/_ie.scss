@@ -1,0 +1,10 @@
+/*******************************************************
+ IE 10+
+********************************************************/
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.select .select__arrow {
+		display: none!important;
+		left: -9999px!important;
+	}
+}

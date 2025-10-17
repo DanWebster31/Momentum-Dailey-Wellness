@@ -1,0 +1,300 @@
+/* BASE */ /*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Variables
+| Author: P11
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+/* GLOBAL*/
+/* FONTS*/
+/* COLORS */
+/* BREAKPOINTS */
+/* Extra small mobile */
+/* Mobile */
+/* Tablet */
+/* Middle Sized Devices */
+/* Small Laptop */
+/* Large Laptop / Desktop */
+/* Large Desktop */
+/*
+       _ _                     _   _
+ _ __ / / | ___ _ __ ___  __ _| |_(_)_   _____
+| '_ \| | |/ __| '__/ _ \/ _` | __| \ \ / / _ \
+| |_) | | | (__| | |  __/ (_| | |_| |\ V /  __/
+| .__/|_|_|\___|_|  \___|\__,_|\__|_| \_/ \___|
+|_|
+
+/*
+|--------------------------------------------------------------------------
+| Mixins
+| Author: P11 Interactive Team
+| Visit us: @ p11.com
+|--------------------------------------------------------------------------
+| 1. Resets
+| 2. Positioning
+|
+| Notes: Define patterns of property value pairs, which can then be reused in other rule sets
+|
+*/
+/*
+| Font Smoothing
+| --------------------------------------------------
+|
+| Aligns most of the browsers with the same font antialiasing.
+|
+*/
+/*
+| Strict Button Style
+| --------------------------------------------------
+|
+| Sets the button style appearance to none for various
+| mobile browsers and OS's that will auto change the styling
+|
+*/
+/*
+| Positioning
+| --------------------------------------------------
+|
+| The following mixins are used for positioning elements
+| via the absolute rule
+|
+*/
+/*
+| Transition
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| transition property
+|
+*/
+/*
+| Box Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| box-shadow property
+|
+*/
+/*
+| Text Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| text-shadow property
+|
+*/
+/*
+| SVG Shadow
+| --------------------------------------------------
+|
+| Used to apply all browser prefixes for the css3
+| filter property
+|
+*/
+/*
+| Responsive Media Query Mixins
+| --------------------------------------------------
+|
+| The following mixins are used for applying various
+| media queries and specified breakpoints
+|
+*/
+/*
+| Transparent Colors
+| --------------------------------------------------
+|
+| Function for creating transparent colors.
+|
+*/
+/*
+| Gradient Backgrounds
+| --------------------------------------------------
+|
+| Mixin for creating gradient backgrounds
+| @include bg-gradient(fn-transparent-color($color-black, 1), fn-transparent-color($color-black, 0), top, bottom, 0%, 100%);
+|
+*/
+/*
+| Rotation
+| --------------------------------------------------
+|
+| Mixin for applying the correct browser prefixes for the
+| transform: rotate property
+|
+*/
+/*
+| Keyframe animations
+| --------------------------------------------------
+| Mixin for applying animations to elements
+|
+*/
+/* BLOCKS */
+.text-section .text-section-content {
+  position: relative;
+  display: flex;
+}
+.text-section .text-section-text {
+  position: relative;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .text-section .text-section-text {
+    min-width: 0;
+    margin: 0;
+    text-align: center !important;
+  }
+}
+.text-section .text-section-text.vtop {
+  justify-content: flex-start;
+}
+.text-section .text-section-text.vbottom {
+  justify-content: flex-end;
+}
+.text-section .text-section-text .text-section-text-content {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+}
+.text-section .text-section-text .text-section-text-content h1, .text-section .text-section-text .text-section-text-content h2 {
+  margin-bottom: 1.5rem;
+}
+.text-section .text-section-text .text-section-text-content p {
+  line-height: 1.6em;
+}
+@media (max-width: 640px) {
+  .text-section .text-section-text .text-section-text-content p {
+    line-height: 1.5em;
+  }
+}
+.text-section .text-section-text .text-section-text-content p a, .text-section .text-section-text .text-section-text-content p .spanlink {
+  text-decoration: underline;
+}
+.text-section .text-section-text .text-section-text-content p a:hover, .text-section .text-section-text .text-section-text-content p .spanlink:hover {
+  opacity: 0.65;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links {
+  position: relative;
+  display: block;
+  z-index: 1;
+  width: 100%;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item {
+  display: inline-block;
+  padding: 0 2rem 0 1rem;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a {
+  display: inline-block;
+  text-align: center;
+  width: fit-content;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.gap1 {
+  margin: 0 1rem;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.gap2 {
+  margin: 0 2rem;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.gap3 {
+  margin: 0 3rem;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.gap4 {
+  margin: 0 4rem;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.gap5 {
+  margin: 0 5rem;
+}
+@media (max-width: 768px) {
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.mgap1 {
+    margin: 1rem auto;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.mgap2 {
+    margin: 2rem auto;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.mgap3 {
+    margin: 3rem auto;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.mgap4 {
+    margin: 4rem auto;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item a.mgap5 {
+    margin: 5rem auto;
+  }
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-row {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-row {
+    text-align: center;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-row a.mgap1 {
+    margin: 1rem auto;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-row a.mgap2 {
+    margin: 2rem auto;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-row a.mgap3 {
+    margin: 3rem auto;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-row a.mgap4 {
+    margin: 4rem auto;
+  }
+  .text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-row a.mgap5 {
+    margin: 5rem auto;
+  }
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-column {
+  display: block;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-column a.mgap1 {
+  margin: 1rem auto;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-column a.mgap2 {
+  margin: 2rem auto;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-column a.mgap3 {
+  margin: 3rem auto;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-column a.mgap4 {
+  margin: 4rem auto;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-column a.mgap5 {
+  margin: 5rem auto;
+}
+.text-section .text-section-text .text-section-text-content .text-section-text-links .link-item.display-column:last-of-type a {
+  margin-bottom: 0;
+}
+.text-section.two-column .text-section-content {
+  display: grid;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 768px) {
+  .text-section.two-column .text-section-content {
+    grid-auto-rows: auto;
+    grid-template-columns: 1fr;
+  }
+}
+.text-section.two-column .text-section-content .text-section-text {
+  width: auto;
+}
+@media (max-width: 768px) {
+  .text-section.two-column .text-section-content .text-section-text {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=content-text-section.css.map */

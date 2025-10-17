@@ -1,0 +1,180 @@
+.text-section {
+
+  .text-section-content {
+    position: relative;
+    display: flex;
+  }
+
+  .text-section-text {
+    position: relative;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 1.125rem;
+    width: 100%;
+    // height: 100%;
+
+    @include mq-md {
+      min-width: 0;
+      margin: 0;
+      text-align: center!important;
+    }
+
+    &.vtop {
+      justify-content: flex-start;
+    }
+
+    &.vbottom {
+      justify-content: flex-end
+    }
+
+    .text-section-text-content {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+
+      h1,h2 {
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        line-height: 1.6em;
+
+        @include mq-sm {
+          line-height: 1.5em;
+        }
+
+        a, .spanlink {
+          text-decoration: underline;
+
+          &:hover {
+            opacity: 0.65;
+          }
+        }
+      }
+      
+      .text-section-text-links {
+        position: relative;
+        display: block;
+        z-index: 1;
+        width: 100%;
+
+        .link-item {
+          display: inline-block;
+          padding: 0 2rem 0 1rem;
+          // padding-right: 1.5em;
+
+          $gaps: 1, 2, 3, 4, 5;
+
+          a {
+            // font-size: 1.5rem;
+            display: inline-block;
+            text-align: center;
+            width: fit-content;
+
+            @each $gap in $gaps {
+              &.gap#{$gap} {
+                  margin: 0 #{$gap}rem;
+              }
+            }
+    
+            @include mq-md {
+              // display: block;
+              @each $gap in $gaps {
+              &.mgap#{$gap} {
+                  margin: #{$gap}rem auto;
+              }
+              }
+            }
+
+          }
+
+          &.display-row {
+            display: inline-block;
+
+            @include mq-md {
+              // display: inline-block;
+              text-align: center;
+
+              a {
+                @each $gap in $gaps {
+               &.mgap#{$gap} {
+                   margin: #{$gap}rem auto;
+               }
+               }
+             }
+            }
+          }
+          
+          &.display-column {
+            display: block;
+            a {
+               @each $gap in $gaps {
+              &.mgap#{$gap} {
+                  margin: #{$gap}rem auto;
+              }
+              }
+            }
+
+            &:last-of-type {
+
+              a {
+                margin-bottom: 0;
+              }
+            }
+          }
+
+          // @include mq-md {
+          //   display: block;
+          //   text-align: center;
+
+          //   a {
+          //     @each $gap in $gaps {
+          //    &.mgap#{$gap} {
+          //        margin: #{$gap}rem auto;
+          //    }
+          //    }
+          //  }
+          // }
+
+        }
+
+        // &.display-column {
+        //   flex-direction: column;
+        // }
+
+      }
+
+    }
+
+  }
+
+  &.two-column {
+    
+    .text-section-content {
+      display: grid;
+      grid-auto-rows: 1fr;
+      grid-template-columns: 1fr 1fr;
+
+      @include mq-md {
+        grid-auto-rows: auto;
+        grid-template-columns: 1fr;
+        // gap: 0!important;
+      }
+
+      .text-section-text {
+        width: auto;
+  
+        @include mq-md {
+          width: 100%;
+        }
+
+      }
+    }
+
+  }
+
+}
